@@ -1,4 +1,4 @@
-# KipRon Mall
+# Kipchoge Mall
 
-An E-Commerce Platform (paying my homage to Eliud Kipchoge)
+An E-Commerce Platform (in homage to Eliud Kipchoge)
 
