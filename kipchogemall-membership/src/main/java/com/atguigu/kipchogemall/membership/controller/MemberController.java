@@ -3,6 +3,7 @@ package com.atguigu.kipchogemall.membership.controller;
 import java.util.Arrays;
 import java.util.Map;
 
+import com.atguigu.kipchogemall.membership.feign.CouponFeignService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -30,6 +31,19 @@ public class MemberController {
     @Autowired
     private MemberService memberService;
 
+    @Autowired
+    private CouponFeignService couponFeignService;
+
+    @RequestMapping("/coupons")
+    public R openFeignTest() {
+
+        MemberEntity memberEntity = new MemberEntity();
+        memberEntity.setNickname("Jerry");
+
+        R membershipCoupons = couponFeignService.membershipCoupons();
+        return R.ok().put("membership", memberEntity)
+                     .put("coupons", membershipCoupons.get("coupons"));
+    }
     /**
      * 列表
      */

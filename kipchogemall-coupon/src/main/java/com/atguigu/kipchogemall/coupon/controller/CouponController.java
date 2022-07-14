@@ -30,6 +30,12 @@ public class CouponController {
     @Autowired
     private CouponService couponService;
 
+    @RequestMapping("/membership/list")
+    public R membershipCoupons() {
+        CouponEntity couponEntity = new CouponEntity();
+        couponEntity.setCouponName("coupon-openfeign-test");
+        return R.ok().put("coupons", Arrays.asList(couponEntity));
+    }
     /**
      * 列表
      */
