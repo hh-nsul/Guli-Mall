@@ -16,6 +16,9 @@
         <module>kipchogemall-order</module>
         <module>kipchogemall-product</module>
         <module>kipchogemall-warehouse</module>
+        <module>renren-fast</module>
+        <module>renren-generator</module>
+        <module>kipchogemall-common</module>
     </modules>
 
 </project>
