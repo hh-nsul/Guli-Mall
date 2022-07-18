@@ -37,6 +37,13 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * Recommended Practices:
  * 每个微服务创建自己的 namespace, 使用不同的 Group 来区分 prod/dev/test 环境
  *
+ * 同时加载多个配置集:
+ * 微服务任何配置信息，任何配置文件都可以放在配置中心，
+ * 只需在 bootstrap.properties 中指定加载配置中心的哪些配置文件即可，
+ * 通过 @Value, @ConfigurationProperties 等注解读取变量值
+ *
+ * 优先读取配置中心的配置项
+ *
  */
 @SpringBootApplication
 @EnableDiscoveryClient
