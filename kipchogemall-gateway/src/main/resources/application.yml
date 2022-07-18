@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        # http://localhost:88/hello?url=baidu
+        - id: baidu_route
+          uri: https://www.baidu.com/
+          predicates:
+            - Query=url, baidu
+        # http://localhost:88/hello?url=taobao
+        - id: taobao_route
+          uri: https://www.taobao.com/
+          predicates:
+            - Query=url, taobao
